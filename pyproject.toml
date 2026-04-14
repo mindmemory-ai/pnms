@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pnms"
+# 发布时请与 pnms/versioning.py 中 LIBRARY_VERSION 保持一致
+version = "0.1.0"
+description = "Personal Neural Memory System - a pluggable long-term memory engine for LLM applications."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "WenBin Yan" }
+]
+dependencies = [
+  "torch>=2.0.0",
+  "sentence-transformers>=2.2.0",
+  "scikit-learn>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://example.com/pnms"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pnms"]
+
